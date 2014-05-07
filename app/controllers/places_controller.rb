@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-	before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy]
+	before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :delete]
 	
 	def index
 		@places = Place.paginate(:page => params[:page], :per_page => 15, :order => 'created_at DESC')
