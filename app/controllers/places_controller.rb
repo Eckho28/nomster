@@ -2,7 +2,7 @@ class PlacesController < ApplicationController
 	before_action :authenticate_user!, :only => [:new, :create, :edit, :update, :delete]
 	
 	def index
-		@places = Place.paginate(:page => params[:page], :per_page => 15, :order => 'created_at DESC')
+		@places = Place.paginate(:page => params[:page], :per_page => 2, :order => 'created_at DESC')
 	end
 
 	def new
@@ -50,6 +50,11 @@ class PlacesController < ApplicationController
   	@place.destroy
  	redirect_to root_path
 	end
+
+  def show
+    @place = Place.find(params[:id])
+    @comment = Comment.new
+  end
 
 
   private
