@@ -1,6 +1,8 @@
 class Comment < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :place
+	
+	default_scope order('created_at DESC')
 
 	RATINGS = {
     'one star'    => '1_star',
