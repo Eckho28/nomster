@@ -3,11 +3,11 @@
   	<h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
 
-    <% if place.pics.present? %>
+    
     <div class="col-xs-10-offset-1 text-center">
     	<%= image_tag place.profilepicture, :class => 'img-responsive' %>
     </div><br /><p>
-    <% end %>
+    
 
     
 <p><%= place.description %></p>
