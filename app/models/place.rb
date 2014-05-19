@@ -1,4 +1,5 @@
 class Place < ActiveRecord::Base
+	mount_uploader :profilepicture, ProfilepictureUploader
 	belongs_to :user
 	has_many :comments
 	has_many :pics
