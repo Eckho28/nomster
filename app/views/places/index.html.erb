@@ -18,7 +18,7 @@
      <div class="item">
     <%= image_tag 'slider2.jpg', :class => 'img-responsive' %>
     <div class="carousel-caption">
-      Find a bar for tonight
+      Find a great bar for tonight!
     </div>
   </div>
   </div>
@@ -63,7 +63,7 @@
 
 <% if place.user.present? %>
 <div class= "pull-right">
-      Uploaded By: <small><%= place.user.email %></small>
+      Uploaded By: <small><%= link_to place.user.email, user_path(place.user) %></small>
       </div>
     <% end %>
 
